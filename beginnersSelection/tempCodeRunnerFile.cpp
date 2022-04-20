@@ -1,18 +1,3 @@
-#include <iostream>
-#include <vector>
-
-int main()
-{
-    int N(200);
-    int num;
-    bool evenTrue{true};
-
-    std::cin >> N;
-
-    std::vector<int> vec(N);
-
-    for (int i = 0; i < N; i++)
-        std::cin >> vec[i];
 
     while (true)
     {
@@ -29,5 +14,3 @@ int main()
             num++;
     }
     std::cout << num << std::endl;
-    return 0;
-}
