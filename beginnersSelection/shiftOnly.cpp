@@ -1,33 +1,35 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
 int main()
 {
-    int N(200);
-    int num;
-    bool evenTrue{true};
-
-    std::cin >> N;
-
-    std::vector<int> vec(N);
-
+    int N;
+    cin >> N;
+    vector<int> A(N);
     for (int i = 0; i < N; i++)
-        std::cin >> vec[i];
+        cin >> A[i];
 
+    int operation_num = 0;
+    bool even_jud(true);
     while (true)
     {
-        for (auto v : vec)
+        for (int i = 0; i < N; i++)
         {
-            if (v % 2 == 1)
-                evenTrue = false;
+            if (A[i] % 2 != 0)
+            {
+                even_jud = false;
+                break;
+            }
             else
-                v /= 2;
+            {
+                A[i] /= 2;
+            }
         }
-        if (!evenTrue)
+        if (!even_jud)
             break;
-        for (auto v : vec)
-            num++;
+        operation_num++;
     }
-    std::cout << num << std::endl;
+    cout << operation_num << "\n";
     return 0;
 }
