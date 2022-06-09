@@ -1,16 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int A{0}, B{0}, C{0}, X{0};
+    cin >> A >> B >> C >> X;
 
-    while (true)
+    int count_true{0};
+    for (int a = 0; a <= A; a++)
     {
-        for (auto v : vec)
+        for (int b = 0; b <= B; b++)
         {
-            if (v % 2 == 1)
-                evenTrue = false;
-            else
-                v /= 2;
+            for (int c = 0; c <= C; c++)
+            {
+                int sum{a * 500 + b * 100 + c * 50};
+                if (sum == X)
+                {
+                    count_true++;
+                }
+            }
         }
-        if (!evenTrue)
-            break;
-        for (auto v : vec)
-            num++;
     }
-    std::cout << num << std::endl;
+    cout << count_true << "\n";
+    return 0;
+}
