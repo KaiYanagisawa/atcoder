@@ -11,13 +11,9 @@ int main()
 
     cin >> N >> T;
     for (int i = 0; i < N; i++)
-    {
         cin >> C[i];
-    }
     for (int i = 0; i < N; i++)
-    {
         cin >> R[i];
-    }
 
     bool t_exit = false;
     vector<int> c_to_r;
@@ -34,9 +30,7 @@ int main()
     {
         int max = R[c_to_r[0]];
         if (c_to_r.size() == 1)
-        {
             cout << c_to_r[0] + 1 << endl;
-        }
         else
         {
             int max_player;
@@ -65,9 +59,7 @@ int main()
         }
 
         if (same_player1_list.size() == 1)
-        {
             cout << same_player1_list[0] + 1;
-        }
         else
         {
             int max = R[same_player1_list[0]];
