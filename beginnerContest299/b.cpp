@@ -60,7 +60,7 @@ int main()
 
         if (same_player1_list.size() == 1)
             cout << same_player1_list[0] + 1;
-        else
+        e｀lse
         {
             int max = R[same_player1_list[0]];
             int max_player;
