@@ -6,12 +6,7 @@ int main()
 {
     int n;
     string s;
-    cin >> n;
-    cin >> s;
-
-    int s_length = s.length();
-    if (s_length != n)
-        return 1;
+    cin >> n >> s;
 
     int t_win = 0;
     int a_win = 0;
@@ -22,31 +17,30 @@ int main()
         else
             a_win++;
     }
+    // cout << "t_win " << t_win << "\n a_win " << a_win << "\n";
+
     if (t_win == a_win)
     {
-        bool first_win_t = false;
         int a_win2 = 0;
         int t_win2 = 0;
         for (int i = 0; i < n; i++)
         {
             if (s[i] == 'T')
-                t_win2++;
+                ++t_win2;
             else
-                a_win2++;
+                ++a_win2;
 
-            if (n % 2 == 0)
+            if (a_win2 >= n / 2)
             {
-                if (t_win2 == n / 2)
-                {
-                    first_win_t = true;
-                    break;
-                }
+                cout << "A\n";
+                break;
+            }
+            else if (t_win2 >= n / 2)
+            {
+                cout << "T\n";
+                break;
             }
         }
-        if (first_win_t)
-            cout << "T\n";
-        else
-            cout << "A\n";
     }
     else
     {
