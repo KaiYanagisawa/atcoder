@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 x = gets.to_i
-gets.to_i
+_n = gets.to_i
 w = gets.split.map(&:to_i)
 q = gets.to_i
 
@@ -16,7 +16,6 @@ q.times do |i|
   else
     x += w[p[i] - 1]
     history << p[i]
-
   end
   puts x
 end
